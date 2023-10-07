@@ -1,0 +1,103 @@
+
+import Navbar from "../Navbar/Navbar";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { updateProfile } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+
+const Register = () => {
+    const {createUserInFirebase} = useContext(AuthContext);
+    const [error,setError]=useState("");
+    const [sucess,setSucess]=useState("")
+    const [showPassword,setShowPassword]=useState(false)
+    const navigate = useNavigate();
+
+    const handleRegister=(e)=> {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
+        const email=e.target.email.value;
+        const password=e.target.password.value;
+        setError('');
+        setSucess('');
+        createUserInFirebase(email,password)
+        .then((result) => {
+            setSucess('Register Sucessfully');
+
+            updateProfile(result.user,{
+                displayName: name,
+                photoURL: photo
+            })
+            .then()
+            .catch()
+            navigate('/');
+        })
+        .catch(error => {
+            setError(error.message)
+        })
+    }
+    return (
+        <div>
+            <div>
+                <div className="bg-base-200">
+                    <Navbar></Navbar>
+                    <div className="hero min-h-screen bg-base-200">
+                        <div className="hero-content flex-col lg:flex-row-reverse">
+                            <div className="text-center lg:text-left">
+                                <h1 className="text-5xl font-bold">Register now!</h1>
+                                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            </div>
+                            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-400">
+                                <form className="card-body" onSubmit={handleRegister}>
+                                    {
+                                        error && <p className="text-red-500 bg-white p-1 rounded-full">{error}</p>
+                                    }
+                                    {
+                                        sucess && <p className="text-green-500 bg-white p-1 rounded-full">{sucess}</p>
+                                    }
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Name</span>
+                                        </label>
+                                        <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Photo URL</span>
+                                        </label>
+                                        <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Email</span>
+                                        </label>
+                                        <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control relative">
+                                        <label className="label">
+                                            <span className="label-text">Password</span>
+                                        </label>
+                                        <input type={showPassword?"text":"password"}
+                                         name="password" placeholder="Password" className="input input-bordered" required />
+                                        <p onClick={()=> setShowPassword(!showPassword)} className="absolute right-1 top-12 text-xl">{showPassword ? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}
+                                </p>
+                                        <label className="label">
+                                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div className="form-control mt-6">
+                                        <button className="btn bg-violet-500 hover:bg-violet-600 text-white">Register</button>
+                                        <p>Already have any accout? please <Link to="/login" className="font-bold text-blue-600">Login</Link></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Register;
