@@ -5,9 +5,13 @@
         "review": 5,
         "service_taken": 488,
         "title": "Wedding decoration",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/vsqSg4f/wedding-Decoration.jpg",
-        "details": "We’re a wedding styling company specializing in chic, elegant and innovative themes, decors and sets for weddings. Every kind of theme is made possible with one symbolic wave of our magic wand to cherish and enhance your wedding."
+        "_details": "We’re a wedding styling company specializing in chic, elegant and innovative themes, decors and sets for weddings. Every kind of theme is made possible with one symbolic wave of our magic wand to cherish and enhance your wedding.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding decoration service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least medium level decoration along with the car service then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": " Using Destination Weddings was the best decision and experience. We got an amazing package that covered six events over six days. Our wedding was spectacular and our family and friends have the best memories because Destination Weddings welcomed, listened, and helped us find an amazing venue.  - Peter M"
     },
     {
         "_id": "b",
@@ -15,9 +19,13 @@
         "review": 5,
         "service_taken": 438,
         "title": "Destination Wedding",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/yPFBpnj/destination-Wedding.jpg",
-        "details": "Your wedding is one of the most significant milestones of your life. And what’s more romantic than jetting off to a beautiful location and celebrating the start of the rest of your life amidst people you cherish with a destination wedding."
+        "_details": "Your wedding is one of the most significant milestones of your life. And what’s more romantic than jetting off to a beautiful location and celebrating the start of the rest of your life amidst people you cherish with a destination wedding.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding destination service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least 1 premium venue along with car service then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": "Our Specialist was a huge help in planning our destination wedding in Mexico and getting all of our guests to the resort. Having this resource to help field questions about the logistics and booking process was a huge help and allowed us to focus our energy on planning the other wedding details.  - Paige B"
     },
     {
         "_id": "c",
@@ -25,9 +33,13 @@
         "review": 4,
         "service_taken": 638,
         "title": "Wedding planning",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/RHFmvj2/wedding-Planning.jpg",
-        "details": "Your truly stress-free wedding planning experience begins with our enthusiastic team. Our consultants put their art into planning perfection, but you still hold the final word. We will be there with you every step of the way."
+        "_details": "Your truly stress-free wedding planning experience begins with our enthusiastic team. Our consultants put their art into planning perfection, but you still hold the final word. We will be there with you every step of the way.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding planning service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least medium type along with car service then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": " Destinationweddings.com was the biggest help in creating the most magical experience for us and all of our guests traveling to Mexico. Our Specialist, Tracy Espina, was always very responsive and available for any and all questions. With her help and guidance, we found the most amazing location for our destination wedding.  - Stacey H"
     },
     {
         "_id": "d",
@@ -35,9 +47,13 @@
         "review": 4,
         "service_taken": 383,
         "title": "Host Services for wedding",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/D76F0KK/host-Service.jpg",
-        "details": "Every wedding has a timeline, and it takes a skilled Wedding Host, a modern day toastmaster, to keep it on track. We provide professional hosts for wedding at very cost effective rates to our clients."
+        "_details": "Every wedding has a timeline, and it takes a skilled Wedding Host, a modern day toastmaster, to keep it on track. We provide professional hosts for wedding at very cost effective rates to our clients.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding host service service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least premium type host along with car service then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": " We had such a great experience with Destination Weddings! Our Specialist really listened to what we wanted in a resort and it didn't disappoint!! Everything from booking our travel to planning out every detail of the wedding was so easy. Our wedding was perfect and all of our guests had an absolute blast!  - Kimberlee K"
     },
     {
         "_id": "e",
@@ -45,9 +61,13 @@
         "review": 4,
         "service_taken": 473,
         "title": "Transportation service",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/M55KVDQ/transportation.jpg",
-        "details": "A transportation system in wedding is very important. Every bridegroom has to go to the bride house for being married with her. A lot of people go to the bride house with bridegroom. So, it is very important to get a good transportation system. We are providing the best transportation system."
+        "_details": "A transportation system in wedding is very important. Every bridegroom has to go to the bride house for being married with her. A lot of people go to the bride house with bridegroom. So, it is very important to get a good transportation system. We are providing the best transportation system.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding trasportation service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least 2 micro-bus along with 4 private car then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": " Using Destination Weddings was the best decision and experience. We got an amazing package that covered six events over six days. Our wedding was spectacular and our family and friends have the best memories because Destination Weddings welcomed, listened, and helped us find an amazing venue.  - Peter M"
     },
     {
         "_id": "f",
@@ -55,9 +75,12 @@
         "review": 5,
         "service_taken": 923,
         "title": "Vehicle decoration",
-        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "thumbnail_url1": "https://i.ibb.co/r4BdRVV/thumbnail2.jpg",
+        "thumbnail_url2": "https://i.ibb.co/19JF65z/thumbnail1.jpg",
+        "thumbnail_url3": "https://i.ibb.co/drxpmXz/thumbnail3.jpg",
         "image_url": "https://i.ibb.co/SNSn86s/decorated-Car.jpg",
-        "details": "Well decorated wedding vehicle are always elating for everyone."
-      }
+        "_details": "Well decorated wedding vehicle are always elating for everyone.",
+        "discount_des": "All of you are cordially invited to see and visit our setvices. This is our wedding vehicle decoration service and you can get extra discount by obeing simple terms and conditions, these are- You have to take at least 4 car decoration along with 4 private car then you will get 20% discount. And if you get more you will get more discount. And you can ge at most 40% discount",
+        "experties_say": " Using Destination Weddings was the best decision and experience. We got an amazing package that covered six events over six days. Our wedding was spectacular and our family and friends have the best memories because Destination Weddings welcomed, listened, and helped us find an amazing venue.  - Peter M"
+    }
 ]
-
