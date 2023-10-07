@@ -1,0 +1,63 @@
+[
+    {
+        "_id": "a",
+        "category_id": "1",
+        "review": 5,
+        "service_taken": 488,
+        "title": "Wedding decoration",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/vsqSg4f/wedding-Decoration.jpg",
+        "details": "We’re a wedding styling company specializing in chic, elegant and innovative themes, decors and sets for weddings. Every kind of theme is made possible with one symbolic wave of our magic wand to cherish and enhance your wedding."
+    },
+    {
+        "_id": "b",
+        "category_id": "2",
+        "review": 5,
+        "service_taken": 438,
+        "title": "Destination Wedding",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/yPFBpnj/destination-Wedding.jpg",
+        "details": "Your wedding is one of the most significant milestones of your life. And what’s more romantic than jetting off to a beautiful location and celebrating the start of the rest of your life amidst people you cherish with a destination wedding."
+    },
+    {
+        "_id": "c",
+        "category_id": "3",
+        "review": 4,
+        "service_taken": 638,
+        "title": "Wedding planning",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/RHFmvj2/wedding-Planning.jpg",
+        "details": "Your truly stress-free wedding planning experience begins with our enthusiastic team. Our consultants put their art into planning perfection, but you still hold the final word. We will be there with you every step of the way."
+    },
+    {
+        "_id": "d",
+        "category_id": "4",
+        "review": 4,
+        "service_taken": 383,
+        "title": "Host Services for wedding",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/D76F0KK/host-Service.jpg",
+        "details": "Every wedding has a timeline, and it takes a skilled Wedding Host, a modern day toastmaster, to keep it on track. We provide professional hosts for wedding at very cost effective rates to our clients."
+    },
+    {
+        "_id": "e",
+        "category_id": "5",
+        "review": 4,
+        "service_taken": 473,
+        "title": "Transportation service",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/M55KVDQ/transportation.jpg",
+        "details": "A transportation system in wedding is very important. Every bridegroom has to go to the bride house for being married with her. A lot of people go to the bride house with bridegroom. So, it is very important to get a good transportation system. We are providing the best transportation system."
+    },
+    {
+        "_id": "f",
+        "category_id": "6",
+        "review": 5,
+        "service_taken": 923,
+        "title": "Vehicle decoration",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://i.ibb.co/SNSn86s/decorated-Car.jpg",
+        "details": "Well decorated wedding vehicle are always elating for everyone."
+      }
+]
+
