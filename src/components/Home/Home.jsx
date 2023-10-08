@@ -3,6 +3,7 @@ import banner from '../../../public/banner2.jpg'
 import { useLoaderData } from "react-router-dom";
 import Services from "../Services/Services";
 import About from "../About/About";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
     const services = useLoaderData();
@@ -29,6 +30,9 @@ const Home = () => {
             </div>
             <div className="container mx-auto">
                 <About></About>
+            </div>
+            <div className="container mx-auto">
+                <Testimonials></Testimonials>
             </div>
         </div>
     );
