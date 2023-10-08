@@ -5,37 +5,44 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Register = () => {
-    const {createUserInFirebase} = useContext(AuthContext);
-    const [error,setError]=useState("");
-    const [sucess,setSucess]=useState("")
-    const [showPassword,setShowPassword]=useState(false)
+    const { createUserInFirebase } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
 
-    const handleRegister=(e)=> {
+    const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photo.value;
-        const email=e.target.email.value;
-        const password=e.target.password.value;
-        setError('');
-        setSucess('');
-        createUserInFirebase(email,password)
-        .then((result) => {
-            setSucess('Register Sucessfully');
-
-            updateProfile(result.user,{
-                displayName: name,
-                photoURL: photo
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        createUserInFirebase(email, password)
+            .then((result) => {
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo
+                })
+                    .then()
+                    .catch(error=>{
+                        Swal.fire({
+                            title: 'Error!',
+                            text: `${error.message}`,
+                            icon: 'error',
+                            confirmButtonText: 'Cool'
+                          })
+                    })
+                navigate('/');
             })
-            .then()
-            .catch()
-            navigate('/');
-        })
-        .catch(error => {
-            setError(error.message)
-        })
+            .catch(error => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: `${error.message}`,
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
+            })
     }
     return (
         <div>
@@ -50,12 +57,6 @@ const Register = () => {
                             </div>
                             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-400">
                                 <form className="card-body" onSubmit={handleRegister}>
-                                    {
-                                        error && <p className="text-red-500 bg-white p-1 rounded-full">{error}</p>
-                                    }
-                                    {
-                                        sucess && <p className="text-green-500 bg-white p-1 rounded-full">{sucess}</p>
-                                    }
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Name</span>
@@ -78,10 +79,10 @@ const Register = () => {
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type={showPassword?"text":"password"}
-                                         name="password" placeholder="Password" className="input input-bordered" required />
-                                        <p onClick={()=> setShowPassword(!showPassword)} className="absolute right-1 top-12 text-xl">{showPassword ? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}
-                                </p>
+                                        <input type={showPassword ? "text" : "password"}
+                                            name="password" placeholder="Password" className="input input-bordered" required />
+                                        <p onClick={() => setShowPassword(!showPassword)} className="absolute right-1 top-12 text-xl">{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                                        </p>
                                         <label className="label">
                                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                         </label>

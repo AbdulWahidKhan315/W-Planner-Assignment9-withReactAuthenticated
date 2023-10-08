@@ -3,28 +3,47 @@ import Navbar from "../Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Swal from "sweetalert2";
+
 
 
 const Login = () => {
 
-    const { signIn, } = useContext(AuthContext);
-    const [error, setError] = useState("");
-    const [showPassword,setShowPassword]=useState(false)
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
 
     const location = useLocation();
+
+
+    const googleLogin = () => {
+        signInWithGoogle()
+            .then()
+            .catch(error => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: `${error.message}`,
+                    icon: 'error',
+                    confirmButtonText: 'Cancel'
+                  })
+            })
+    }
 
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        setError('');
         signIn(email, password)
-            .then(()=>{
+            .then(() => {
                 navigate(location?.state ? location.state : '/')
             })
-            .catch(error => {
-                setError(error.message);
+            .catch(() => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Invalid Email and password! Check your email and password',
+                    icon: 'error',
+                    confirmButtonText: 'Cancel'
+                  })
             })
     }
     return (
@@ -35,12 +54,11 @@ const Login = () => {
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="text-2xl font-bold mb-3">Login With google!</p>
+                        <button onClick={googleLogin} className="btn btn-secondary">Google</button>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-400">
                         <form className="card-body" onSubmit={handleLogin}>
-                            {
-                                error && <p className="text-red-500 bg-white p-1 rounded-full">{error}</p>
-                            }
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -51,9 +69,9 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type={showPassword?"text":"password"}
-                                 name="password" placeholder="Password" className="input input-bordered " required />
-                                <p onClick={()=> setShowPassword(!showPassword)} className="absolute right-1 top-12 text-xl">{showPassword ? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}
+                                <input type={showPassword ? "text" : "password"}
+                                    name="password" placeholder="Password" className="input input-bordered " required />
+                                <p onClick={() => setShowPassword(!showPassword)} className="absolute right-1 top-12 text-xl">{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                                 </p>
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
