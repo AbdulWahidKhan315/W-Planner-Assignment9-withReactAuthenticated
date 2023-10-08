@@ -2,6 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import banner from '../../../public/banner2.jpg'
 import { useLoaderData } from "react-router-dom";
 import Services from "../Services/Services";
+import About from "../About/About";
 
 const Home = () => {
     const services = useLoaderData();
@@ -17,14 +18,17 @@ const Home = () => {
                         <button className="btn btn-outline btn-primary font-bold">Enquire Now</button>
                     </div>
                 </div>
-                    <div className="max-w-6xl mx-auto mt-8">
-                        <h1 className="text-4xl text-center font-bold mb-10">Our Services</h1>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                            {
-                                services.map(service => <Services key={service._id} service={service}></Services>)
-                            }
-                        </div>
+                <div className="max-w-6xl mx-auto mt-8">
+                    <h1 className="text-4xl text-center font-bold mb-10">Our Services</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {
+                            services.map(service => <Services key={service._id} service={service}></Services>)
+                        }
                     </div>
+                </div>
+            </div>
+            <div className="container mx-auto">
+                <About></About>
             </div>
         </div>
     );
