@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 
 
+
 const Login = () => {
 
     const { signIn, signInWithGoogle } = useContext(AuthContext);
@@ -15,17 +16,24 @@ const Login = () => {
 
     const location = useLocation();
 
-
     const googleLogin = () => {
         signInWithGoogle()
-            .then()
+            .then(() => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Login Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                })
+                navigate(location?.state ? location.state : '/')
+            })
             .catch(error => {
                 Swal.fire({
                     title: 'Error!',
                     text: `${error.message}`,
                     icon: 'error',
                     confirmButtonText: 'Cancel'
-                  })
+                })
             })
     }
 
@@ -35,6 +43,12 @@ const Login = () => {
         const password = e.target.password.value;
         signIn(email, password)
             .then(() => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Login Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                })
                 navigate(location?.state ? location.state : '/')
             })
             .catch(() => {
@@ -43,7 +57,7 @@ const Login = () => {
                     text: 'Invalid Email and password! Check your email and password',
                     icon: 'error',
                     confirmButtonText: 'Cancel'
-                  })
+                })
             })
     }
     return (
@@ -53,7 +67,7 @@ const Login = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">Please Login, if you want know about the Top venues and Gallery from our website which are shown in the navbar then you must login.</p>
                         <p className="text-2xl font-bold mb-3">Login With google!</p>
                         <button onClick={googleLogin} className="btn btn-secondary">Google</button>
                     </div>

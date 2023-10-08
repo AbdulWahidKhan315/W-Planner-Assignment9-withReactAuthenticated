@@ -20,6 +20,12 @@ const Register = () => {
         const password = e.target.password.value;
         createUserInFirebase(email, password)
             .then((result) => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Register Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                })
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL: photo
@@ -53,7 +59,7 @@ const Register = () => {
                         <div className="hero-content flex-col lg:flex-row-reverse">
                             <div className="text-center lg:text-left">
                                 <h1 className="text-5xl font-bold">Register now!</h1>
-                                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                                <p className="py-6">Please register in our website. By completing the registration you will get the premium service from our website.</p>
                             </div>
                             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-400">
                                 <form className="card-body" onSubmit={handleRegister}>
