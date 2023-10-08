@@ -6,6 +6,7 @@ import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import CardDetails from "../components/cardDetails/cardDetails";
 import TopVenues from "../components/TopVenues/TopVenues";
+import Gallery from "../components/Gallery/Gallery";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: '/TopVenues',
                 element: <PrivateRoute><TopVenues></TopVenues></PrivateRoute>
+            },
+            {
+                path: '/gallery',
+                element: <PrivateRoute><Gallery></Gallery></PrivateRoute>
             }
         ]
     }
