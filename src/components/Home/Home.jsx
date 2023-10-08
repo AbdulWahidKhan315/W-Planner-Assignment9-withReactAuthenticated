@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Services from "../Services/Services";
 import About from "../About/About";
 import Testimonials from "../Testimonials/Testimonials";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
     const services = useLoaderData();
@@ -34,6 +35,7 @@ const Home = () => {
             <div className="container mx-auto">
                 <Testimonials></Testimonials>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
