@@ -7,12 +7,14 @@ import PrivateRoute from "./PrivateRoute";
 import CardDetails from "../components/cardDetails/cardDetails";
 import TopVenues from "../components/TopVenues/TopVenues";
 import Gallery from "../components/Gallery/Gallery";
+import Error from "../Error/Error";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
