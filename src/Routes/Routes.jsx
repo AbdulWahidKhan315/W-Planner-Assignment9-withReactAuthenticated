@@ -5,6 +5,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import CardDetails from "../components/cardDetails/cardDetails";
+import TopVenues from "../components/TopVenues/TopVenues";
 
 
 const router = createBrowserRouter([
@@ -25,9 +26,14 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
-            },{
+            },
+            {
                 path: '/register',
                 element:<Register></Register>
+            },
+            {
+                path: '/TopVenues',
+                element: <PrivateRoute><TopVenues></TopVenues></PrivateRoute>
             }
         ]
     }

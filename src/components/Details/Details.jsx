@@ -1,4 +1,4 @@
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar, AiOutlineDollarCircle } from 'react-icons/ai';
 
 const Details = ({ details }) => {
 
@@ -22,9 +22,9 @@ const Details = ({ details }) => {
                     </div>
                     <div className='mt-3 border border-violet-900 bg-violet-200 text-violet-900 p-4 rounded-lg hover:scale-105 duration-300'>
                         <h2 className="text-4xl font-bold">Details price list:</h2>
-                        <p className='text-3xl ml-3'>*** Premium:{base_price}</p>
-                        <p className='text-2xl ml-12'>** Medium:{medium_price}</p>
-                        <p className='text-xl ml-24'>* Normal:{normal_price}</p>
+                        <p className='text-3xl ml-3 flex items-center gap-2'>*** Premium:{base_price}<AiOutlineDollarCircle></AiOutlineDollarCircle></p>
+                        <p className='text-2xl ml-12 flex items-center gap-2'>** Medium:{medium_price}<AiOutlineDollarCircle></AiOutlineDollarCircle></p>
+                        <p className='text-xl ml-24 flex items-center gap-2'>* Normal:{normal_price}<AiOutlineDollarCircle></AiOutlineDollarCircle></p>
                     </div>
                 </div>
             </div>
