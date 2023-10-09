@@ -6,7 +6,7 @@ const TopVenues = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="md:grid md:grid-cols-4 md:gap-4 container mx-auto mt-14">
+            <div className="lg:grid lg:grid-cols-4 lg:gap-4 container mx-auto mt-14">
                 <div className=" md:col-span-3 ">
                     <div className="text-center text-[#ba869a] space-y-2 border-b-2 border-[#ba869a] border-dashed">
                         <p>DESTINATION WEDDING & HONEYMOON RESORTS</p>

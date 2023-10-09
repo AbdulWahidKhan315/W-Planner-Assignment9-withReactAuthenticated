@@ -4,7 +4,7 @@ import { FaDollarSign } from 'react-icons/fa';
 const Services = ({ service }) => {
     const { title, image_url, _details, _id ,base_price} = service;
     return (
-        <div className="card bg-base-100 shadow-xl hover:scale-105 duration-300">
+        <div className="card bg-base-100 shadow-xl ">
             <figure className="px-10 pt-10">
                 <img src={image_url} alt="Shoes" className="rounded-xl" />
             </figure>
